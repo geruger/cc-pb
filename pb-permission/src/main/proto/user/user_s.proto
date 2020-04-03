@@ -1,0 +1,17 @@
+//定义使用协议
+syntax = "proto3";
+//生成多个文件
+option java_multiple_files = true;
+//定义包名
+option java_package = "com.jtzy.aisteel.proto.ucenter.user";
+//定义类名
+option java_outer_classname = "UserProto";
+// 导入其他包
+import "user/user_m.proto";
+
+service UserService {
+
+    //添加用户
+    rpc userAdd (UserAddEntity) returns (IntegerEntity);
+
+}

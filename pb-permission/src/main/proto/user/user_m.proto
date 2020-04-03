@@ -1,0 +1,21 @@
+//定义使用协议
+syntax = "proto3";
+//生成多个文件
+option java_multiple_files = true;
+//定义包名
+option java_package = "com.jtzy.aisteel.proto.ucenter.user";
+
+message UserAddEntity {
+    int32 vid = 1;
+    string username = 2;
+    string password = 3;
+    string realname = 4;
+    string mobile = 5;
+    int64 lastmodifytime = 6;
+    bytes status = 7;
+    int32 deptmentnid = 8;
+}
+
+message IntegerEntity {
+    int32 intEnt = 51000;
+}
